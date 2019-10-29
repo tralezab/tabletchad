@@ -1,5 +1,5 @@
 dofile( "data/scripts/perks/perk.lua" )
-dofile("mods/bigdumb/data/files/no_wand_pickups.lua")
+dofile( "mods/bigdumb/files/no_wand_pickups.lua" )
 
 function OnPlayerSpawned( player_entity ) -- this runs when player entity has been created
 
@@ -33,9 +33,10 @@ function OnPlayerSpawned( player_entity ) -- this runs when player entity has be
 			local item_entity = EntityLoad( item_entity )
 			EntityAddChild( inventory, item_entity )
 		end
+	end
 
 	--now the last thing, giving a perk.
-	local perk_entity = perk_spawn( x, y, "EDIT_WANDS_EVERYWHERE" )
+	local perk_entity = perk_spawn( x, y, "NO_WANDS" )
 	if ( perk_entity ~= nil ) then
 		perk_pickup( perk_entity, player_entity, EntityGetName( perk_entity ), false, false )
 	end

@@ -1,18 +1,18 @@
 <Entity tags="tablet">
 	<Base file="data/entities/items/books/base_book.xml">
 		<UIInfoComponent
-			name="$throwtablet2"
+			name="Holy Tablet - volume I"
 			>
 		</UIInfoComponent>
 		
 		<ItemComponent
-			item_name="$throwtablet2"
-			ui_description="$throwtabletdesc2"
+			item_name="Holy Tablet - volume I"
+			ui_description="...FUCK HIISI..."
 			>
 		</ItemComponent>
 		
 		<AbilityComponent
-			ui_name="$throwtablet2"
+			ui_name="Holy Tablet - volume I"
 			>
 		</AbilityComponent>
 	</Base>
