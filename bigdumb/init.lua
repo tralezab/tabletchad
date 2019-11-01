@@ -3,6 +3,13 @@ dofile( "mods/bigdumb/files/no_wand_pickups.lua" )
 
 function OnPlayerSpawned( player_entity ) -- this runs when player entity has been created
 
+	-- prevents doing this on every startup
+	local tablet_setup_flag = "tablets_init_done"
+	if GameHasFlagRun( tablet_setup_flag ) then
+		return
+	end
+	GameAddFlagRun( tablet_setup_flag )
+
 	local inventory = nil
 	local x,y = EntityGetTransform( player_entity )
 
